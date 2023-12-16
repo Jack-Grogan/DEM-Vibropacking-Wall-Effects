@@ -22,8 +22,8 @@ colors = ['limegreen', 'b', '#FF0000', '#FFD300']
 
 # Read in csv file
 
-data = pd.read_csv(r"C:\Users\jackr\OneDrive\Documents\Summer Research Project 2023\AWE\model_validation\final_paper_packing_results.csv")
-voxels_data = pd.read_csv(r"C:\Users\jackr\OneDrive\Documents\Summer Research Project 2023\AWE\model_validation\final_voxels_packing_results.csv")
+data = pd.read_csv(r"final_paper_packing_results.csv")
+voxels_data = pd.read_csv(r"final_voxels_packing_results.csv")
 
 data1 = data["continuous"]
 data2 = data["periodic"]
