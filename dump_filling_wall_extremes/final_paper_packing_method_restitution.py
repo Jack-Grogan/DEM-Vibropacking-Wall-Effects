@@ -117,4 +117,4 @@ density_bank = np.asarray(density_bank).T
 # writing data to csv file
 
 df = pd.DataFrame(density_bank, columns = columns, index = rows)
-df.to_csv('final_paper_packing_results_restitution2.csv', index = True)
+df.to_csv('final_paper_packing_results_restitution.csv', index = True)
