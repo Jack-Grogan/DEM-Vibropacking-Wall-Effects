@@ -24,7 +24,7 @@ import konigcell as kc
 x_len = 0.12
 y_len = 0.12
 
-# calculate packing density half a particle radius from the periodic boundary
+# calculate packing density a particle radius from the periodic boundary
 # avoids inaccurate packing density while particles passing through the periodic boundary wall
 
 len_adjust = 0.005
