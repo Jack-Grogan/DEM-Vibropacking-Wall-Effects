@@ -110,17 +110,63 @@ The run order of both the shell launch scripts, and the file it launches are out
 
 </details>
 
-<details markdown="1"><summary><h3><a href="./batch_filling_wall_extremes">batch_filling_wall_extremes</a></h3></summary>
+<details markdown="1"><summary><h3><a href="./method_2_wall_extremes">method_2_wall_extremes</a></h3></summary>
 
-1\) [launch_restitution_generator.sh](./batch_filling_wall_extremes/launch_restitution_generator.sh) &#8594; [restitution_generator.py](./batch_filling_wall_extremes/restitution_generator.py) <br />
-1\) [launch_rolling_generator.sh](./batch_filling_wall_extremes/launch_rolling_generator.sh) &#8594; [rolling_generator.py](./batch_filling_wall_extremes/rolling_generator.py) <br />
-1\) [launch_sliding_generator.sh](./batch_filling_wall_extremes/launch_sliding_generator.sh) &#8594; [sliding_generator.py](./batch_filling_wall_extremes/sliding_generator.py) <br />
-2\) [final_paper_packing_launch_restitution.sh](./batch_filling_wall_extremes/final_paper_packing_launch_restitution.sh) &#8594; [final_paper_packing_method_restitution.py](./batch_filling_wall_extremes/final_paper_packing_method_restitution.py) <br />
-2\) [final_paper_packing_launch_rolling.sh](./batch_filling_wall_extremes/final_paper_packing_launch_rolling.sh) &#8594; [final_paper_packing_method_rolling.py](./batch_filling_wall_extremes/final_paper_packing_method_rolling.py) <br />
-2\) [final_paper_packing_launch_sliding.sh](./batch_filling_wall_extremes/final_paper_packing_launch_sliding.sh) &#8594; [final_paper_packing_method_sliding.py](./batch_filling_wall_extremes/final_paper_packing_method_sliding.py) <br />
-3\) [restitution_graph_launch.sh](./batch_filling_wall_extremes/restitution_graph_launch.sh) &#8594; [restitution_packing_graphs_batch.py](./batch_filling_wall_extremes/restitution_packing_graphs_batch.py) <br />
-3\) [rolling_graph_launch.sh](./batch_filling_wall_extremes/rolling_graph_launch.sh) &#8594; [rolling_packing_graphs_batch.py](./batch_filling_wall_extremes/rolling_packing_graphs_batch.py) <br />
-3\) [sliding_graph_launch.sh](./batch_filling_wall_extremes/sliding_graph_launch.sh) &#8594; [sliding_packing_graphs_batch.py](./batch_filling_wall_extremes/sliding_packing_graphs_batch.py)
+1\) [launch_restitution_generator.sh](./method_2_wall_extremes/launch_restitution_generator.sh) &#8594; [restitution_generator.py](./method_2_wall_extremes/restitution_generator.py) <br />
+1\) [launch_rolling_generator.sh](./method_2_wall_extremes/launch_rolling_generator.sh) &#8594; [rolling_generator.py](./method_2_wall_extremes/rolling_generator.py) <br />
+1\) [launch_sliding_generator.sh](./method_2_wall_extremes/launch_sliding_generator.sh) &#8594; [sliding_generator.py](./method_2_wall_extremes/sliding_generator.py) <br />
+2\) [final_voxel_packing_launch_restitution.sh](./method_2_wall_extremes/final_voxel_packing_launch_restitution.sh) &#8594; [final_voxel_packing_method_restitution.py](./method_2_wall_extremes/final_voxel_packing_method_restitution.py) <br />
+2\) [final_voxel_packing_launch_rolling.sh](./method_2_wall_extremes/final_voxel_packing_launch_rolling.sh) &#8594; [final_voxel_packing_method_rolling.py](./method_2_wall_extremes/final_voxel_packing_method_rolling.py) <br />
+2\) [final_voxel_packing_launch_sliding.sh](./method_2_wall_extremes/final_voxel_packing_launch_sliding.sh) &#8594; [final_voxel_packing_method_sliding.py](./method_2_wall_extremes/final_voxel_packing_method_sliding.py) <br />
+2\) [final_paper_packing_launch_restitution.sh](./method_2_wall_extremes/final_paper_packing_launch_restitution.sh) &#8594; [final_paper_packing_method_restitution.py](./method_2_wall_extremes/final_paper_packing_method_restitution.py) <br />
+2\) [final_paper_packing_launch_rolling.sh](./method_2_wall_extremes/final_paper_packing_launch_rolling.sh) &#8594; [final_paper_packing_method_rolling.py](./method_2_wall_extremes/final_paper_packing_method_rolling.py) <br />
+2\) [final_paper_packing_launch_sliding.sh](./method_2_wall_extremes/final_paper_packing_launch_sliding.sh) &#8594; [final_paper_packing_method_sliding.py](./method_2_wall_extremes/final_paper_packing_method_sliding.py) <br />
+3\) [restitution_voxel_graph_launch.sh](./method_2_wall_extremes/restitution_voxel_graph_launch.sh) &#8594; [restitution_voxel_graphs.py](./method_2_wall_extremes/restitution_voxel_graphs.py) <br />
+3\) [rolling_voxel_graph_launch.sh](./method_2_wall_extremes/rolling_voxel_graph_launch.sh) &#8594; [rolling_voxel_graphs.py](./method_2_wall_extremes/rolling_voxel_graphs.py) <br />
+3\) [sliding_voxel_graph_launch.sh](./method_2_wall_extremes/sliding_voxel_graph_launch.sh) &#8594; [sliding_voxel_graphs.py](./method_2_wall_extremes/sliding_voxel_graphs.py) <br />
+3\) [restitution_graph_launch.sh](./method_2_wall_extremes/restitution_graph_launch.sh) &#8594; [restitution_packing_graphs.py](./method_2_wall_extremes/restitution_packing_graphs.py) <br />
+3\) [rolling_graph_launch.sh](./method_2_wall_extremes/rolling_graph_launch.sh) &#8594; [rolling_packing_graphs.py](./method_2_wall_extremes/rolling_packing_graphs.py) <br />
+3\) [sliding_graph_launch.sh](./method_2_wall_extremes/sliding_graph_launch.sh) &#8594; [sliding_packing_graphs.py](./method_2_wall_extremes/sliding_packing_graphs.py)
+
+</details>
+
+<details markdown="1"><summary><h3><a href="./method_3_wall_extremes">method_3_wall_extremes</a></h3></summary>
+
+1\) [launch_restitution_generator.sh](./method_3_wall_extremes/launch_restitution_generator.sh) &#8594; [restitution_generator.py](./method_3_wall_extremes/restitution_generator.py) <br />
+1\) [launch_rolling_generator.sh](./method_3_wall_extremes/launch_rolling_generator.sh) &#8594; [rolling_generator.py](./method_3_wall_extremes/rolling_generator.py) <br />
+1\) [launch_sliding_generator.sh](./method_3_wall_extremes/launch_sliding_generator.sh) &#8594; [sliding_generator.py](./method_3_wall_extremes/sliding_generator.py) <br />
+2\) [final_voxel_packing_launch_restitution.sh](./method_3_wall_extremes/final_voxel_packing_launch_restitution.sh) &#8594; [final_voxel_packing_method_restitution.py](./method_3_wall_extremes/final_voxel_packing_method_restitution.py) <br />
+2\) [final_voxel_packing_launch_rolling.sh](./method_3_wall_extremes/final_voxel_packing_launch_rolling.sh) &#8594; [final_voxel_packing_method_rolling.py](./method_3_wall_extremes/final_voxel_packing_method_rolling.py) <br />
+2\) [final_voxel_packing_launch_sliding.sh](./method_3_wall_extremes/final_voxel_packing_launch_sliding.sh) &#8594; [final_voxel_packing_method_sliding.py](./method_3_wall_extremes/final_voxel_packing_method_sliding.py) <br />
+2\) [final_paper_packing_launch_restitution.sh](./method_3_wall_extremes/final_paper_packing_launch_restitution.sh) &#8594; [final_paper_packing_method_restitution.py](./method_3_wall_extremes/final_paper_packing_method_restitution.py) <br />
+2\) [final_paper_packing_launch_rolling.sh](./method_3_wall_extremes/final_paper_packing_launch_rolling.sh) &#8594; [final_paper_packing_method_rolling.py](./method_3_wall_extremes/final_paper_packing_method_rolling.py) <br />
+2\) [final_paper_packing_launch_sliding.sh](./method_3_wall_extremes/final_paper_packing_launch_sliding.sh) &#8594; [final_paper_packing_method_sliding.py](./method_3_wall_extremes/final_paper_packing_method_sliding.py) <br />
+3\) [restitution_voxel_graph_launch.sh](./method_3_wall_extremes/restitution_voxel_graph_launch.sh) &#8594; [restitution_voxel_graphs_batch.py](./method_3_wall_extremes/restitution_voxel_graphs_batch.py) <br />
+3\) [rolling_voxel_graph_launch.sh](./method_3_wall_extremes/rolling_voxel_graph_launch.sh) &#8594; [rolling_voxel_graphs_batch.py](./method_3_wall_extremes/rolling_voxel_graphs_batch.py) <br />
+3\) [sliding_voxel_graph_launch.sh](./method_3_wall_extremes/sliding_voxel_graph_launch.sh) &#8594; [sliding_voxel_graphs_batch.py](./method_3_wall_extremes/sliding_voxel_graphs_batch.py) <br />
+3\) [restitution_graph_launch.sh](./method_3_wall_extremes/restitution_graph_launch.sh) &#8594; [restitution_packing_graphs_batch.py](./method_3_wall_extremes/restitution_packing_graphs_batch.py) <br />
+3\) [rolling_graph_launch.sh](./method_3_wall_extremes/rolling_graph_launch.sh) &#8594; [rolling_packing_graphs_batch.py](./method_3_wall_extremes/rolling_packing_graphs_batch.py) <br />
+3\) [sliding_graph_launch.sh](./method_3_wall_extremes/sliding_graph_launch.sh) &#8594; [sliding_packing_graphs_batch.py](./method_3_wall_extremes/sliding_packing_graphs_batch.py)
+
+</details>
+
+<details markdown="1"><summary><h3><a href="./method_4_wall_extremes">method_4_wall_extremes</a></h3></summary>
+
+1\) [launch_restitution_generator.sh](./method_4_wall_extremes/launch_restitution_generator.sh) &#8594; [restitution_generator.py](./method_4_wall_extremes/restitution_generator.py) <br />
+1\) [launch_rolling_generator.sh](./method_4_wall_extremes/launch_rolling_generator.sh) &#8594; [rolling_generator.py](./method_4_wall_extremes/rolling_generator.py) <br />
+1\) [launch_sliding_generator.sh](./method_4_wall_extremes/launch_sliding_generator.sh) &#8594; [sliding_generator.py](./method_4_wall_extremes/sliding_generator.py) <br />
+2\) [final_voxel_packing_launch_restitution.sh](./method_4_wall_extremes/final_voxel_packing_launch_restitution.sh) &#8594; [final_voxel_packing_method_restitution.py](./method_4_wall_extremes/final_voxel_packing_method_restitution.py) <br />
+2\) [final_voxel_packing_launch_rolling.sh](./method_4_wall_extremes/final_voxel_packing_launch_rolling.sh) &#8594; [final_voxel_packing_method_rolling.py](./method_4_wall_extremes/final_voxel_packing_method_rolling.py) <br />
+2\) [final_voxel_packing_launch_sliding.sh](./method_4_wall_extremes/final_voxel_packing_launch_sliding.sh) &#8594; [final_voxel_packing_method_sliding.py](./method_4_wall_extremes/final_voxel_packing_method_sliding.py) <br />
+2\) [final_paper_packing_launch_restitution.sh](./method_4_wall_extremes/final_paper_packing_launch_restitution.sh) &#8594; [final_paper_packing_method_restitution.py](./method_4_wall_extremes/final_paper_packing_method_restitution.py) <br />
+2\) [final_paper_packing_launch_rolling.sh](./method_4_wall_extremes/final_paper_packing_launch_rolling.sh) &#8594; [final_paper_packing_method_rolling.py](./method_4_wall_extremes/final_paper_packing_method_rolling.py) <br />
+2\) [final_paper_packing_launch_sliding.sh](./method_4_wall_extremes/final_paper_packing_launch_sliding.sh) &#8594; [final_paper_packing_method_sliding.py](./method_4_wall_extremes/final_paper_packing_method_sliding.py) <br />
+3\) [restitution_voxel_graph_launch.sh](./method_4_wall_extremes/restitution_voxel_graph_launch.sh) &#8594; [restitution_voxel_graphs.py](./method_4_wall_extremes/restitution_voxel_graphs.py) <br />
+3\) [rolling_voxel_graph_launch.sh](./method_4_wall_extremes/rolling_voxel_graph_launch.sh) &#8594; [rolling_voxel_graphs.py](./method_4_wall_extremes/rolling_voxel_graphs.py) <br />
+3\) [sliding_voxel_graph_launch.sh](./method_4_wall_extremes/sliding_voxel_graph_launch.sh) &#8594; [sliding_voxel_graphs.py](./method_4_wall_extremes/sliding_voxel_graphs.py) <br />
+3\) [restitution_graph_launch.sh](./method_4_wall_extremes/restitution_graph_launch.sh) &#8594; [restitution_packing_graphs.py](./method_4_wall_extremes/restitution_packing_graphs.py) <br />
+3\) [rolling_graph_launch.sh](./method_4_wall_extremes/rolling_graph_launch.sh) &#8594; [rolling_packing_graphs.py](./method_4_wall_extremes/rolling_packing_graphs.py) <br />
+3\) [sliding_graph_launch.sh](./method_4_wall_extremes/sliding_graph_launch.sh) &#8594; [sliding_packing_graphs.py](./method_4_wall_extremes/sliding_packing_graphs.py)
 
 </details>
 
