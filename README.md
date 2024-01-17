@@ -23,7 +23,7 @@ The run order of both the shell launch scripts, and the file it launches are out
   2\) [z_voxel_periodic_packing_launch.sh](./model_validation/box_plots/z_voxel_periodic_packing_launch.sh) &#8594; [z_voxel_periodic_packing_method.py](./model_validation/box_plots/z_voxel_periodic_packing_method.py) <br />
   2\) [z_voxel_batch_continuous_packing_launch.sh](./model_validation/box_plots/z_voxel_batch_continuous_packing_launch.sh) &#8594; [z_voxel_batch_continuous_packing_method.py](./model_validation/box_plots/z_voxel_batch_continuous_packing_method.py) <br />
   2\) [z_voxel_batch_periodic_packing_launch.sh](./model_validation/box_plots/z_voxel_batch_periodic_packing_launch.sh) &#8594; [z_voxel_batch_periodic_packing_method.py](./model_validation/box_plots/z_voxel_batch_periodic_packing_method.py) <br />
-  3\) [graph_launch.sh](./model_validation/box_plots/graph_launch.sh) &#8594; [model_validation_graphs.py](./model_validation/box_plots/model_validation_graphs.py)
+  3\) [graph_launch.sh](./model_validation/box_plots/graph_launch.sh) &#8594; [model_validation_graphs.py](./model_validation/box_plots/model_validation_graphs.py) <br />
   3\) [z_graph_launch.sh](./model_validation/box_plots/z_graph_launch.sh) &#8594; [z_voxels_graph.py](./model_validation/box_plots/z_voxels_graph.py)
   
 </details>
@@ -58,7 +58,9 @@ The run order of both the shell launch scripts, and the file it launches are out
 
 1\) [launch_generator.sh](./glass_bead_wall_effects/particle_wall_restitution/launch_generator.sh) &#8594; [generator.py](./glass_bead_wall_effects/particle_wall_restitution/generator.py)
  <br />
+2\) [final_voxel_packing_launch.sh](./glass_bead_wall_effects/particle_wall_restitution/final_voxel_packing_launch.sh) &#8594; [final_voxel_packing_method.py](./glass_bead_wall_effects/particle_wall_restitution/final_voxel_packing_method.py) <br />
 2\) [final_paper_packing_launch.sh](./glass_bead_wall_effects/particle_wall_restitution/final_paper_packing_launch.sh) &#8594; [final_paper_packing_method.py](./glass_bead_wall_effects/particle_wall_restitution/final_paper_packing_method.py) <br />
+3\) [restitution_voxel_graph_launch.sh](./glass_bead_wall_effects/particle_wall_restitution/restitution_voxel_graph_launch.sh) &#8594; [wall_restitution_voxel_graph.py](./glass_bead_wall_effects/particle_wall_restitution/wall_restitution_voxel_graph.py) <br />
 3\) [restitution_graph_launch.sh](./glass_bead_wall_effects/particle_wall_restitution/restitution_graph_launch.sh) &#8594; [wall_restitution_graph.py](./glass_bead_wall_effects/particle_wall_restitution/wall_restitution_graph.py)
 
 </details>
@@ -67,8 +69,11 @@ The run order of both the shell launch scripts, and the file it launches are out
 
 1\) [launch_generator.sh](./glass_bead_wall_effects/particle_wall_restitution/launch_generator.sh) &#8594; [generator.py](./glass_bead_wall_effects/particle_wall_restitution/generator.py) <br />
 1\) [launch_generator_wide.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/launch_generator_wide.sh) &#8594; [generator_wide.py](./glass_bead_wall_effects/particle_wall_rolling_friction/generator_wide.py) <br />
+2\) [final_voxel_packing_launch.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/final_voxel_packing_launch.sh) &#8594; [final_voxel_packing_method.py](./glass_bead_wall_effects/particle_wall_rolling_friction/final_voxel_packing_method.py) <br />
+2\) [final_voxel_packing_launch_wide.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/final_voxel_packing_launch_wide.sh) &#8594; [final_voxel_packing_method_wide.py](./glass_bead_wall_effects/particle_wall_rolling_friction/final_voxel_packing_method_wide.py) <br />
 2\) [final_paper_packing_launch.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/final_paper_packing_launch.sh) &#8594; [final_paper_packing_method.py](./glass_bead_wall_effects/particle_wall_rolling_friction/final_paper_packing_method.py) <br />
 2\) [final_paper_packing_launch_wide.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/final_paper_packing_launch_wide.sh) &#8594; [final_paper_packing_method_wide.py](./glass_bead_wall_effects/particle_wall_rolling_friction/final_paper_packing_method_wide.py) <br />
+3\) [rolling_voxel_graph_launch.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/rolling_voxel_graph_launch.sh) &#8594; [wall_rolling_voxel_graph.py](./glass_bead_wall_effects/particle_wall_rolling_friction/wall_rolling_voxel_graph.py) <br />
 3\) [rolling_graph_launch.sh](./glass_bead_wall_effects/particle_wall_rolling_friction/rolling_graph_launch.sh) &#8594; [wall_rolling_graph.py](./glass_bead_wall_effects/particle_wall_rolling_friction/wall_rolling_graph.py)
 
 </details>
@@ -76,7 +81,9 @@ The run order of both the shell launch scripts, and the file it launches are out
 <details markdown="1"><summary><h4><a href="./glass_bead_wall_effects/particle_wall_sliding_friction">particle_wall_sliding_friction</a></h4></summary>
 
 1\) [launch_generator.sh](./glass_bead_wall_effects/particle_wall_sliding_friction/launch_generator.sh) &#8594; [generator.py](./glass_bead_wall_effects/particle_wall_sliding_friction/generator.py) <br />
+2\) [final_voxel_packing_launch.sh](./glass_bead_wall_effects/particle_wall_sliding_friction/final_voxel_packing_launch.sh) &#8594; [final_voxel_packing_method.py](./glass_bead_wall_effects/particle_wall_sliding_friction/final_voxel_packing_method.py) <br />
 2\) [final_paper_packing_launch.sh](./glass_bead_wall_effects/particle_wall_sliding_friction/final_paper_packing_launch.sh) &#8594; [final_paper_packing_method.py](./glass_bead_wall_effects/particle_wall_sliding_friction/final_paper_packing_method.py) <br />
+3\) [sliding_voxel_graph_launch.sh](./glass_bead_wall_effects/particle_wall_sliding_friction/sliding_voxel_graph_launch.sh) &#8594; [wall_sliding_voxel_graph.py](./glass_bead_wall_effects/particle_wall_sliding_friction/wall_sliding_voxel_graph.py) <br />
 3\) [sliding_graph_launch.sh](./glass_bead_wall_effects/particle_wall_sliding_friction/sliding_graph_launch.sh) &#8594; [wall_sliding_graph.py](./glass_bead_wall_effects/particle_wall_sliding_friction/wall_sliding_graph.py)
 
 </details>
