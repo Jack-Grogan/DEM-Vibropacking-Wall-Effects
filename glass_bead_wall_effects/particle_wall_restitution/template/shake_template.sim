@@ -1,0 +1,206 @@
+#      ___  ________  ________  ___  __            ________     
+#     |\  \|\   __  \|\   ____\|\  \|\  \         |\   ____\    
+#     \ \  \ \  \|\  \ \  \___|\ \  \/  /|_       \ \  \___|    
+#   __ \ \  \ \   __  \ \  \    \ \   ___  \       \ \  \  ___  
+#  |\  \\_\  \ \  \ \  \ \  \____\ \  \\ \  \       \ \  \|\  \ 
+#  \ \________\ \__\ \__\ \_______\ \__\\ \__\       \ \_______\
+#   \|________| \|__|\|__|\|_______|\|__| \|__|        \|_______|
+#                             
+
+
+# Simulation control
+variable Timestep           equal {{ timestep }}             # seconds
+variable DumpTime           equal {{ dumptime }}             # seconds
+
+variable OnTime             equal {{ ontime }}               # seconds
+variable FillTime           equal {{ filltime }}             # seconds
+variable SettleTime         equal {{ settletime }}           # seconds
+
+variable NumParticles       equal {{ number_particles }}     # Number of particles
+variable ParticleRate       equal ${NumParticles}*10         # Particle insertion rate
+
+# particle radius
+variable radius             equal {{ particle_radius }}      # m 
+
+variable AmpX               equal 0.1*2*${radius}            # Amplitude of 0.1d
+variable AmpY               equal 0.1*2*${radius}
+variable AmpZ               equal 0.1*2*${radius}
+variable OscillationPeriod  equal {{ period  }}              # rad/s
+
+
+# Particle-particle (PP) and particle-wall (PW) interaction constants
+
+variable Density            equal {{ density }}              # kg m-3
+variable YoungsModulus      equal {{ youngs_modulus }}       # N m2
+variable PoissonRatio       equal {{ poisson_ratio }}        # -
+
+variable SlidingPP          equal {{ sliding_pp }}           # -
+variable SlidingPW          equal {{ sliding_pw }}           # -
+
+variable RollingPP          equal {{ rolling_pp }}           # -
+variable RollingPW          equal {{ rolling_pw }}           # -
+
+variable RestitutionPP      equal {{ restitution_pp }}       # -
+variable RestitutionPW      equal {{ restitution_pw }}       # -
+
+variable CohesionPP         equal {{ cohesion_pp }}          # -
+variable CohesionPW         equal {{ cohesion_pw }}          # -
+
+
+# Particle size distribution - radii (R{N}) and corresponding fractions (F{N})
+
+variable R0 equal ${radius}
+variable R1 equal ${radius}
+variable R2 equal ${radius}
+variable R3 equal ${radius}
+variable R4 equal ${radius}
+variable R5 equal ${radius}
+variable R6 equal ${radius}
+variable R7 equal ${radius}
+variable R8 equal ${radius}
+variable R9 equal ${radius}
+
+
+variable F0 equal 1
+variable F1 equal 0
+variable F2 equal 0
+variable F3 equal 0
+variable F4 equal 0
+variable F5 equal 0
+variable F6 equal 0
+variable F7 equal 0
+variable F8 equal 0
+variable F9 equal 0
+
+
+# Set up simulation style
+atom_style      granular
+atom_modify map array
+
+boundary        f f f                                        # fixed boundary conditions
+newton          off
+communicate     single vel yes
+units           si
+
+
+# Simulated region
+region domain block -0.3 0.3 -0.3 0.3 -0.05 1.3 units box    # domain in which cylinder shakes within
+create_box 2 domain
+
+
+# Set up neighbor-list
+neighbor        0.0008  bin
+neigh_modify    delay   0
+hard_particles  yes
+soft_particles  yes
+
+
+# Particle / wall contact properties
+fix m1 all property/global youngsModulus peratomtype &
+    ${YoungsModulus}    ${YoungsModulus}
+
+fix m2 all property/global poissonsRatio peratomtype &
+    ${PoissonRatio}     ${PoissonRatio}
+
+fix m3 all property/global coefficientFriction peratomtypepair 2        &
+    ${SlidingPP}        ${SlidingPW}                                    &
+    ${SlidingPW}        0
+
+fix m4 all property/global coefficientRollingFriction peratomtypepair 2 &
+    ${RollingPP}        ${RollingPW}                                    &
+    ${RollingPW}        0
+
+fix m5 all property/global coefficientRestitution peratomtypepair 2     &
+    ${RestitutionPP}    ${RestitutionPW}                                &
+    ${RestitutionPW}    0.1
+
+fix m6 all property/global cohesionEnergyDensity peratomtypepair 2      &
+    ${CohesionPP}       ${CohesionPW}                                   &
+    ${CohesionPW}       0
+
+fix m7 all property/global k_finnie peratomtypepair 2 1 1 1 1
+
+
+# Contact pair styles
+pair_style gran model hertz tangential history cohesion sjkr rolling_friction cdt 
+pair_coeff * *
+
+
+# Timestep size
+timestep ${Timestep}
+
+
+# Set gravity as a constant force
+fix gravi all gravity 9.81 vector 0.0 0.0 -1.0
+
+
+# STL Geometries: drum / faces
+fix cad all mesh/surface/stress file    mesh/shake_cylinder.stl        type 2 wear finnie
+fix inface all mesh/surface file        mesh/inface.stl                type 2
+
+
+# Wall contact models
+fix granwalls all wall/gran model hertz tangential history rolling_friction cdt &
+    mesh n_meshes 1 meshes cad
+
+
+# Particle size distribution 
+fix frac0 all particletemplate/sphere 15485863 atom_type 1 density constant ${Density} radius constant ${R0}
+fix frac1 all particletemplate/sphere 20433971 atom_type 1 density constant ${Density} radius constant ${R1}
+fix frac2 all particletemplate/sphere 20433977 atom_type 1 density constant ${Density} radius constant ${R2}
+fix frac3 all particletemplate/sphere 20434457 atom_type 1 density constant ${Density} radius constant ${R3}
+fix frac4 all particletemplate/sphere 20434553 atom_type 1 density constant ${Density} radius constant ${R4}
+fix frac5 all particletemplate/sphere 20435099 atom_type 1 density constant ${Density} radius constant ${R5}
+fix frac6 all particletemplate/sphere 20437121 atom_type 1 density constant ${Density} radius constant ${R6}
+fix frac7 all particletemplate/sphere 20437457 atom_type 1 density constant ${Density} radius constant ${R7}
+fix frac8 all particletemplate/sphere 20437687 atom_type 1 density constant ${Density} radius constant ${R8}
+fix frac9 all particletemplate/sphere 20437811 atom_type 1 density constant ${Density} radius constant ${R9}
+
+fix pdd all particledistribution/discrete/numberbased 49979693 10   &
+    frac0 ${F0} frac1 ${F1} frac2 ${F2} frac3 ${F3} frac4 ${F4}     &
+    frac5 ${F5} frac6 ${F6} frac7 ${F7} frac8 ${F8} frac9 ${F9}
+
+
+# Particle insertion
+fix ins all insert/stream   seed {{ seed }}                 &
+                            distributiontemplate pdd        &
+                            nparticles ${NumParticles}      &
+                            particlerate ${ParticleRate}    &
+                            overlapcheck yes                &
+                            all_in no                       &
+                            vel constant 0.0 0.0 -0.5       &
+                            insertion_face inface extrude_length 0.015
+
+
+# Integration scheme
+fix integr all nve/sphere
+
+
+# Output settings, include total thermal energy
+modify_timing on 
+
+thermo        1000
+thermo_style  custom step atoms ke vol time
+thermo_modify lost ignore norm no
+
+
+# Save particle locations as VTK files straight from LIGGGHTS
+variable Dumpstep equal ${DumpTime}/${Timestep}
+dump dmp all custom/vtk ${Dumpstep} post/particles_*.vtk id type x y z ix iy iz vx vy vz fx fy fz omegax omegay omegaz radius 
+dump dmpMyMesh all mesh/vtk ${Dumpstep} post/mesh_*.vtk vel area cad
+
+# Evaluate digital twin
+variable OnSteps     equal ${OnTime}/${Timestep}
+variable FillSteps   equal ${FillTime}/${Timestep}
+variable SettleSteps equal ${SettleTime}/${Timestep}
+
+# Run simulation
+
+run ${FillSteps}                                                                                     # 2 second    Total = 2s
+
+fix move all move/mesh mesh cad wiggle amplitude ${AmpX} ${AmpY} ${AmpZ} period ${OscillationPeriod} # 12.5 second    Total = 14.5s
+run ${OnSteps}
+
+unfix move
+run ${SettleSteps}
+# 1 second Total = 15.5s
