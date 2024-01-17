@@ -14,11 +14,17 @@ The run order of both the shell launch scripts, and the file it launches are out
   
   1\) [launch_continuous_batch_generator.sh](./model_validation/box_plots/launch_continuous_batch_generator.sh) &#8594; [continuous_batch_generator.py](./model_validation/box_plots/continuous_batch_generator.py) <br />
   1\) [launch_continuous_generator.sh](./model_validation/box_plots/launch_continuous_generator.sh) &#8594; [continuous_generator.py](./model_validation/box_plots/continuous_generator.py) <br />
+  1\) [launch_continuous_generator_60s.sh](./model_validation/box_plots/launch_continuous_generator_60s.sh) &#8594; [continuous_generator_60s.py](./model_validation/box_plots/continuous_generator_60s.py) <br />
   1\) [launch_periodic_batch_generator.sh](./model_validation/box_plots/launch_periodic_batch_generator.sh) &#8594; [periodic_batch_generator.py](./model_validation/box_plots/periodic_batch_generator.py) <br />
   1\) [launch_periodic_generator.sh](./model_validation/box_plots/launch_periodic_generator.sh) &#8594; [periodic_generator.py](./model_validation/box_plots/periodic_generator.py) <br />
   2\) [final_paper_packing_launch.sh](./model_validation/box_plots/final_paper_packing_launch.sh) &#8594; [final_paper_packing_method.py](./model_validation/box_plots/final_paper_packing_method.py) <br />
   2\) [final_voxel_packing_launch.sh](./model_validation/box_plots/final_voxel_packing_launch.sh) &#8594; [final_voxel_packing_method.py](./model_validation/box_plots/final_voxel_packing_method.py) <br />
+  2\) [z_voxel_continuous_packing_launch.sh](./model_validation/box_plots/z_voxel_continuous_packing_launch.sh) &#8594; [z_voxel_continuous_packing_method.py](./model_validation/box_plots/z_voxel_continuous_packing_method.py) <br />
+  2\) [z_voxel_periodic_packing_launch.sh](./model_validation/box_plots/z_voxel_periodic_packing_launch.sh) &#8594; [z_voxel_periodic_packing_method.py](./model_validation/box_plots/z_voxel_periodic_packing_method.py) <br />
+  2\) [z_voxel_batch_continuous_packing_launch.sh](./model_validation/box_plots/z_voxel_batch_continuous_packing_launch.sh) &#8594; [z_voxel_batch_continuous_packing_method.py](./model_validation/box_plots/z_voxel_batch_continuous_packing_method.py) <br />
+  2\) [z_voxel_batch_periodic_packing_launch.sh](./model_validation/box_plots/z_voxel_batch_periodic_packing_launch.sh) &#8594; [z_voxel_batch_periodic_packing_method.py](./model_validation/box_plots/z_voxel_batch_periodic_packing_method.py) <br />
   3\) [graph_launch.sh](./model_validation/box_plots/graph_launch.sh) &#8594; [model_validation_graphs.py](./model_validation/box_plots/model_validation_graphs.py)
+  3\) [z_graph_launch.sh](./model_validation/box_plots/z_graph_launch.sh) &#8594; [z_voxels_graph.py](./model_validation/box_plots/z_voxels_graph.py)
   
 </details>
 
@@ -27,7 +33,9 @@ The run order of both the shell launch scripts, and the file it launches are out
 <details markdown="1"><summary><h5><a href="./model_validation/line_plots/continuous_graph">continuous_graph</a></h5></summary>
   
   1\) [simulation_launch.sh](./model_validation/line_plots/continuous_graph/simulation_launch.sh)  &#8594; [shake.sim](./model_validation/line_plots/continuous_graph/shake.sim) <br />
+  2\) [voxel_packing_launch.sh](./model_validation/line_plots/continuous_graph/voxel_packing_launch.sh) &#8594; [voxel_packing_method.py](./model_validation/line_plots/continuous_graph/voxel_packing_method.py) <br />
   2\) [paper_packing_launch.sh](./model_validation/line_plots/continuous_graph/paper_packing_launch.sh) &#8594; [paper_packing_method.py](./model_validation/line_plots/continuous_graph/paper_packing_method.py) <br />
+  3\) [continuous_voxel_graph_launch.sh](./model_validation/line_plots/continuous_graph/continuous_voxel_graph_launch.sh) &#8594; [density_time_continuous_voxel_graph.py](./model_validation/line_plots/continuous_graph/density_time_continuous_voxel_graph.py) <br />
   3\) [continuous_graph_launch.sh](./model_validation/line_plots/continuous_graph/continuous_graph_launch.sh) &#8594; [density_time_continuous_graph.py](./model_validation/line_plots/continuous_graph/density_time_continuous_graph.py)
   
 </details>
@@ -35,7 +43,9 @@ The run order of both the shell launch scripts, and the file it launches are out
 <details markdown="1"><summary><h5><a href="./model_validation/line_plots/periodic_graph">periodic_graph</a></h5></summary>
   
   1\) [simulation_launch.sh](./model_validation/line_plots/periodic_graph/simulation_launch.sh) &#8594; [shake.sim](./model_validation/line_plots/periodic_graph/shake.sim) <br />
+  2\) [voxel_packing_launch.sh](./model_validation/line_plots/periodic_graph/voxel_packing_launch.sh) &#8594; [voxel_packing_method.py](./model_validation/line_plots/periodic_graph/voxel_packing_method.py) <br />
   2\) [paper_packing_launch.sh](./model_validation/line_plots/periodic_graph/paper_packing_launch.sh) &#8594; [paper_packing_method.py](./model_validation/line_plots/periodic_graph/paper_packing_method.py) <br />
+  3\) [periodic_voxel_graph_launch.sh](./model_validation/line_plots/periodic_graph/periodic_voxel_graph_launch.sh) &#8594;  [density_time_periodic_voxel_graph.py](./model_validation/line_plots/periodic_graph/density_time_periodic_voxel_graph.py) <br />
   3\) [periodic_graph_launch.sh](./model_validation/line_plots/periodic_graph/periodic_graph_launch.sh) &#8594;  [density_time_periodic_graph.py](./model_validation/line_plots/periodic_graph/density_time_periodic_graph.py)
   
 </details>
