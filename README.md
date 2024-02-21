@@ -172,4 +172,4 @@ The run order of both the shell launch scripts, and the file it launches are out
 
 ## Citing
 Please cite the accompanying paper:
-> [Paper after Publication]
+> Jack R. Grogan, Andrei L. Nicuşan, Christopher R.K. Windows-Yule, Effect of cylinder wall parameters on the final packing density of mono-disperse spheres subject to three dimensional vibrations, Particuology, 2024
